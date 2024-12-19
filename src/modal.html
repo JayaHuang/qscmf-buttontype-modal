@@ -76,5 +76,11 @@
       }
 
     });
+
+    // 监听模态框的关闭事件
+    $('#' + domId).on('hidden.bs.modal', function () {
+      // 重置表单
+      $(this).find('form')[0].reset();
+    });
   });
 </script>
